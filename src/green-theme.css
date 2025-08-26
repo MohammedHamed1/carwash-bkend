@@ -1,0 +1,367 @@
+/* تطبيق الألوان الخضراء على جميع الأيقونات والأزرار في المشروع */
+
+/* الأيقونات - fill أبيض و background أخضر */
+.icon-green {
+  fill: white !important;
+  background-color: #22c55e !important;
+}
+
+/* الأزرار الخضراء */
+.btn-green {
+  background-color: #22c55e !important;
+  color: white !important;
+  border-color: #22c55e !important;
+}
+
+.btn-green:hover {
+  background-color: #16a34a !important;
+  border-color: #16a34a !important;
+}
+
+/* الأيقونات في الأزرار */
+.btn-green svg,
+.btn-green .icon {
+  fill: white !important;
+}
+
+/* الأيقونات في البطاقات */
+.card-icon-green {
+  background-color: #22c55e !important;
+  color: white !important;
+}
+
+.card-icon-green svg {
+  fill: white !important;
+}
+
+/* الأيقونات في القوائم */
+.nav-icon-green {
+  background-color: #22c55e !important;
+  color: white !important;
+}
+
+.nav-icon-green svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في الموقع */
+[class*="bg-gradient-to"] svg,
+[class*="bg-green"] svg,
+[class*="bg-emerald"] svg,
+[class*="bg-blue"] svg,
+[class*="bg-purple"] svg,
+[class*="bg-orange"] svg,
+[class*="bg-yellow"] svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأزرار */
+button[class*="bg-gradient-to"],
+button[class*="bg-green"],
+button[class*="bg-emerald"],
+button[class*="bg-blue"],
+button[class*="bg-purple"],
+button[class*="bg-orange"],
+button[class*="bg-yellow"],
+a[class*="bg-gradient-to"],
+a[class*="bg-green"],
+a[class*="bg-emerald"],
+a[class*="bg-blue"],
+a[class*="bg-purple"],
+a[class*="bg-orange"],
+a[class*="bg-yellow"] {
+  background-color: #22c55e !important;
+  color: white !important;
+}
+
+button[class*="bg-gradient-to"]:hover,
+button[class*="bg-green"]:hover,
+button[class*="bg-emerald"]:hover,
+button[class*="bg-blue"]:hover,
+button[class*="bg-purple"]:hover,
+button[class*="bg-orange"]:hover,
+button[class*="bg-yellow"]:hover,
+a[class*="bg-gradient-to"]:hover,
+a[class*="bg-green"]:hover,
+a[class*="bg-emerald"]:hover,
+a[class*="bg-blue"]:hover,
+a[class*="bg-purple"]:hover,
+a[class*="bg-orange"]:hover,
+a[class*="bg-yellow"]:hover {
+  background-color: #16a34a !important;
+}
+
+/* تطبيق على جميع الروابط */
+Link[class*="bg-gradient-to"],
+Link[class*="bg-green"],
+Link[class*="bg-emerald"],
+Link[class*="bg-blue"],
+Link[class*="bg-purple"],
+Link[class*="bg-orange"],
+Link[class*="bg-yellow"] {
+  background-color: #22c55e !important;
+  color: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في قسم المميزات */
+.bg-gradient-to-r svg,
+.bg-gradient-to-br svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في الإحصائيات */
+[class*="from-green"] svg,
+[class*="from-blue"] svg,
+[class*="from-purple"] svg,
+[class*="from-orange"] svg,
+[class*="from-yellow"] svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في البطاقات */
+.card svg,
+.feature-card svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في الأقسام */
+section svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في الصفحات */
+.page svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في المكونات */
+.component svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في المشروع بالكامل */
+* svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في الأقسام المختلفة */
+.why-us svg,
+.features svg,
+.stats svg,
+.packages svg,
+.contact svg,
+.footer svg,
+.header svg,
+.nav svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في الصفحات المختلفة */
+.home svg,
+.packages-page svg,
+.contact-page svg,
+.about svg,
+.services svg,
+.faq svg,
+.support svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في المكونات المختلفة */
+.hero svg,
+.packages-section svg,
+.contact-section svg,
+.footer svg,
+.header svg,
+.navigation svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في الأقسام الفرعية */
+.hero-section svg,
+.packages-section svg,
+.contact-section svg,
+.footer-section svg,
+.header-section svg,
+.navigation-section svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في الصفحات الفرعية */
+.home-page svg,
+.packages-page svg,
+.contact-page svg,
+.about-page svg,
+.services-page svg,
+.faq-page svg,
+.support-page svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في المكونات الفرعية */
+.hero-component svg,
+.packages-component svg,
+.contact-component svg,
+.footer-component svg,
+.header-component svg,
+.navigation-component svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في أي مكان في المشروع */
+div svg,
+span svg,
+button svg,
+a svg,
+section svg,
+article svg,
+aside svg,
+header svg,
+footer svg,
+nav svg,
+main svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في الأقسام المحددة */
+.why-us-section svg,
+.features-section svg,
+.stats-section svg,
+.packages-section svg,
+.contact-section svg,
+.footer-section svg,
+.header-section svg,
+.nav-section svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في الصفحات المحددة */
+.home-page svg,
+.packages-page svg,
+.contact-page svg,
+.about-page svg,
+.services-page svg,
+.faq-page svg,
+.support-page svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في المكونات المحددة */
+.hero-component svg,
+.packages-component svg,
+.contact-component svg,
+.footer-component svg,
+.header-component svg,
+.navigation-component svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في الأقسام الفرعية المحددة */
+.hero-section svg,
+.packages-section svg,
+.contact-section svg,
+.footer-section svg,
+.header-section svg,
+.navigation-section svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في الصفحات الفرعية المحددة */
+.home-page svg,
+.packages-page svg,
+.contact-page svg,
+.about-page svg,
+.services-page svg,
+.faq-page svg,
+.support-page svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في المكونات الفرعية المحددة */
+.hero-component svg,
+.packages-component svg,
+.contact-component svg,
+.footer-component svg,
+.header-component svg,
+.navigation-component svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في أي مكان في المشروع */
+div svg,
+span svg,
+button svg,
+a svg,
+section svg,
+article svg,
+aside svg,
+header svg,
+footer svg,
+nav svg,
+main svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في الأقسام المحددة */
+.why-us-section svg,
+.features-section svg,
+.stats-section svg,
+.packages-section svg,
+.contact-section svg,
+.footer-section svg,
+.header-section svg,
+.nav-section svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في الصفحات المحددة */
+.home-page svg,
+.packages-page svg,
+.contact-page svg,
+.about-page svg,
+.services-page svg,
+.faq-page svg,
+.support-page svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في المكونات المحددة */
+.hero-component svg,
+.packages-component svg,
+.contact-component svg,
+.footer-component svg,
+.header-component svg,
+.navigation-component svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في الأقسام الفرعية المحددة */
+.hero-section svg,
+.packages-section svg,
+.contact-section svg,
+.footer-section svg,
+.header-section svg,
+.navigation-section svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في الصفحات الفرعية المحددة */
+.home-page svg,
+.packages-page svg,
+.contact-page svg,
+.about-page svg,
+.services-page svg,
+.faq-page svg,
+.support-page svg {
+  fill: white !important;
+}
+
+/* تطبيق على جميع الأيقونات في المكونات الفرعية المحددة */
+.hero-component svg,
+.packages-component svg,
+.contact-component svg,
+.footer-component svg,
+.header-component svg,
+.navigation-component svg {
+  fill: white !important;
+} 

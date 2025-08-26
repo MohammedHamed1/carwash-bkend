@@ -1,0 +1,304 @@
+/* Card Icons Professional Styling */
+
+.card-icons-container {
+  position: relative;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.card-icons-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.card-icon-wrapper {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.card-icon-wrapper:hover {
+  transform: translateY(-2px) scale(1.05);
+  border-color: #cbd5e1;
+}
+
+.card-icon-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.card-icon-wrapper:hover::before {
+  left: 100%;
+}
+
+.card-icon {
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.card-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.card-icon-wrapper:hover + .card-label {
+  color: #374151;
+  font-weight: 600;
+}
+
+/* Specific Card Type Styles */
+
+/* Visa Card */
+.visa-card {
+  background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+  border-color: #2d3748;
+}
+
+.visa-card:hover {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  border-color: #4a5568;
+}
+
+/* Mastercard */
+.mastercard-card {
+  background: linear-gradient(135deg, #c53030 0%, #e53e3e 100%);
+  border-color: #e53e3e;
+}
+
+.mastercard-card:hover {
+  background: linear-gradient(135deg, #e53e3e 0%, #f56565 100%);
+  border-color: #f56565;
+}
+
+/* Mada Card */
+.mada-card {
+  background: linear-gradient(135deg, #38a169 0%, #48bb78 100%);
+  border-color: #48bb78;
+}
+
+.mada-card:hover {
+  background: linear-gradient(135deg, #48bb78 0%, #68d391 100%);
+  border-color: #68d391;
+}
+
+/* Card Icons Animation */
+@keyframes card-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.card-icon-wrapper {
+  animation: card-float 3s ease-in-out infinite;
+}
+
+.card-icon-wrapper:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.card-icon-wrapper:nth-child(3) {
+  animation-delay: 1s;
+}
+
+/* Card Icons Loading State */
+.card-icons-loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-icons-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Card Icons Success State */
+.card-icons-success {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border: 2px solid #22c55e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-icons-container {
+    border-radius: 10px;
+    padding: 12px;
+  }
+  
+  .card-icon-wrapper {
+    border-radius: 6px;
+    width: 10px;
+    height: 6px;
+  }
+  
+  .card-icon {
+    width: 8px;
+    height: 4px;
+  }
+  
+  .card-label {
+    font-size: 0.625rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-icons-container {
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .card-icon-wrapper {
+    border-radius: 4px;
+    width: 8px;
+    height: 5px;
+  }
+  
+  .card-icon {
+    width: 6px;
+    height: 3px;
+  }
+  
+  .card-label {
+    font-size: 0.5rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .card-icons-container {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border-color: #475569;
+  }
+  
+  .card-icon-wrapper {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+    border-color: #64748b;
+  }
+  
+  .card-label {
+    color: #cbd5e1;
+  }
+  
+  .card-icon-wrapper:hover + .card-label {
+    color: #f1f5f9;
+  }
+}
+
+/* Card Icons Grid Layout */
+.card-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 16px;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Card Icons Flex Layout */
+.card-icons-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Card Icons Stack Layout */
+.card-icons-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Card Icons with Badge */
+.card-icon-with-badge {
+  position: relative;
+}
+
+.card-icon-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ef4444;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.625rem;
+  font-weight: bold;
+}
+
+/* Card Icons with Tooltip */
+.card-icon-tooltip {
+  position: relative;
+}
+
+.card-icon-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f2937;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.card-icon-tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-4px);
+} 

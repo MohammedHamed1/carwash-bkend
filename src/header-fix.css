@@ -1,0 +1,83 @@
+/* حل مشكلة الهيدر الثابت - Header Fix */
+
+/* تعريف ارتفاع الهيدر */
+:root {
+  --header-height-mobile: 4rem;  /* 64px */
+  --header-height-desktop: 5rem; /* 80px */
+}
+
+/* حل عام لجميع الصفحات التي تحتوي على min-h-screen */
+.min-h-screen {
+  padding-top: var(--header-height-mobile);
+}
+
+@media (min-width: 640px) {
+  .min-h-screen {
+    padding-top: var(--header-height-desktop);
+  }
+}
+
+/* حل للصفحات التي تحتاج centering */
+.min-h-screen.flex.items-center.justify-center {
+  padding-top: var(--header-height-mobile);
+}
+
+@media (min-width: 640px) {
+  .min-h-screen.flex.items-center.justify-center {
+    padding-top: var(--header-height-desktop);
+  }
+}
+
+/* حل للعناصر التي تحتوي على id (للروابط الداخلية) */
+[id] {
+  scroll-margin-top: var(--header-height-mobile);
+}
+
+@media (min-width: 640px) {
+  [id] {
+    scroll-margin-top: var(--header-height-desktop);
+  }
+}
+
+/* تحسينات إضافية للهيدر */
+header.fixed {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 50 !important;
+}
+
+/* تأكد من أن المحتوى لا يختفي خلف الهيدر */
+main {
+  padding-top: var(--header-height-mobile);
+}
+
+@media (min-width: 640px) {
+  main {
+    padding-top: var(--header-height-desktop);
+  }
+}
+
+/* حل للصفحات التي تستخدم App.jsx */
+#root > div:first-child {
+  padding-top: var(--header-height-mobile);
+}
+
+@media (min-width: 640px) {
+  #root > div:first-child {
+    padding-top: var(--header-height-desktop);
+  }
+}
+
+/* استثناء للصفحات التي لا تحتاج هيدر */
+.no-header-fix {
+  padding-top: 0 !important;
+}
+
+/* تحسينات للأداء */
+@media (prefers-reduced-motion: reduce) {
+  .min-h-screen {
+    transition: none !important;
+  }
+} 

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار تباعد الكلمات في أزرار الدفع</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Payment Text Spacing - تحسين تباعد الكلمات في أزرار الدفع */
+        
+        /* تحسين تباعد الكلمات في أزرار الدفع */
+        .payment-method-text {
+          text-align: right;
+          direction: rtl;
+        }
+        
+        .payment-method-title {
+          font-weight: 600;
+          font-size: 1.125rem;
+          color: #1f2937;
+          margin-bottom: 0.5rem;
+          letter-spacing: 0.025em;
+        }
+        
+        .payment-method-description {
+          font-size: 0.875rem;
+          color: #6b7280;
+          line-height: 1.6;
+          letter-spacing: 0.01em;
+          word-spacing: 0.1em;
+        }
+        
+        /* تحسين تباعد الكلمات العربية */
+        .arabic-text {
+          word-spacing: 0.2em;
+          letter-spacing: 0.05em;
+        }
+        
+        /* تحسين تباعد الكلمات الإنجليزية */
+        .english-text {
+          word-spacing: 0.15em;
+          letter-spacing: 0.02em;
+        }
+        
+        /* تحسين تنسيق أزرار الدفع */
+        .payment-button-content {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          width: 100%;
+        }
+        
+        .payment-button-icon {
+          flex-shrink: 0;
+          width: 3.5rem;
+          height: 3.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 0.75rem;
+          transition: all 0.3s ease;
+        }
+        
+        .payment-button-text {
+          flex: 1;
+          text-align: right;
+          min-width: 0;
+        }
+        
+        .payment-button-title {
+          font-weight: 600;
+          font-size: 1.125rem;
+          color: #1f2937;
+          margin-bottom: 0.25rem;
+          line-height: 1.4;
+        }
+        
+        .payment-button-description {
+          font-size: 0.875rem;
+          color: #6b7280;
+          line-height: 1.5;
+          word-spacing: 0.1em;
+        }
+        
+        /* تحسين تباعد الكلمات في Apple Pay */
+        .apple-pay-text {
+          word-spacing: 0.15em;
+          letter-spacing: 0.02em;
+        }
+        
+        .apple-pay-title {
+          font-weight: 600;
+          font-size: 1.125rem;
+          color: #1f2937;
+          margin-bottom: 0.25rem;
+          line-height: 1.4;
+        }
+        
+        .apple-pay-description {
+          font-size: 0.875rem;
+          color: #6b7280;
+          line-height: 1.6;
+          word-spacing: 0.1em;
+        }
+        
+        /* تحسين تباعد الكلمات في بطاقة الائتمان */
+        .credit-card-text {
+          word-spacing: 0.2em;
+          letter-spacing: 0.05em;
+        }
+        
+        .credit-card-title {
+          font-weight: 600;
+          font-size: 1.125rem;
+          color: #1f2937;
+          margin-bottom: 0.25rem;
+          line-height: 1.4;
+        }
+        
+        .credit-card-description {
+          font-size: 0.875rem;
+          color: #6b7280;
+          line-height: 1.6;
+          word-spacing: 0.15em;
+        }
+        
+        /* تحسين التباعد العام */
+        .payment-method-container {
+          padding: 1.5rem;
+          border-radius: 1rem;
+          border: 2px solid transparent;
+          transition: all 0.3s ease;
+          cursor: pointer;
+        }
+        
+        .payment-method-container:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .payment-method-container.selected {
+          border-color: #10b981;
+          background-color: #f0fdf4;
+        }
+        
+        /* تحسين التباعد للشاشات الصغيرة */
+        @media (max-width: 768px) {
+          .payment-button-content {
+            gap: 0.75rem;
+          }
+          
+          .payment-button-icon {
+            width: 3rem;
+            height: 3rem;
+          }
+          
+          .payment-button-title {
+            font-size: 1rem;
+          }
+          
+          .payment-button-description {
+            font-size: 0.8rem;
+          }
+          
+          .payment-method-container {
+            padding: 1rem;
+          }
+        }
+        
+        /* تحسين التباعد للشاشات الكبيرة */
+        @media (min-width: 1024px) {
+          .payment-button-content {
+            gap: 1.25rem;
+          }
+          
+          .payment-button-icon {
+            width: 4rem;
+            height: 4rem;
+          }
+          
+          .payment-button-title {
+            font-size: 1.25rem;
+          }
+          
+          .payment-button-description {
+            font-size: 0.9rem;
+          }
+        }
+        
+        /* تحسين التباعد للطباعة */
+        @media print {
+          .payment-method-container {
+            border: 1px solid #d1d5db;
+            box-shadow: none;
+          }
+          
+          .payment-button-icon {
+            filter: grayscale(100%);
+          }
+        }
+        
+        /* تنسيقات إضافية لضمان ظهور التحسينات */
+        .text-right {
+          text-align: right !important;
+        }
+        
+        .leading-relaxed {
+          line-height: 1.6 !important;
+        }
+        
+        .mb-2 {
+          margin-bottom: 0.5rem !important;
+        }
+        
+        /* تحسين تباعد الكلمات في جميع أزرار الدفع */
+        button .flex-1.text-right h3,
+        button .flex-1.text-right div {
+          margin-bottom: 0.5rem !important;
+          line-height: 1.6 !important;
+          word-spacing: 0.1em !important;
+        }
+        
+        /* تحسين تباعد الكلمات في divs */
+        div .flex-1.text-right h3,
+        div .flex-1.text-right p {
+          margin-bottom: 0.5rem !important;
+          line-height: 1.6 !important;
+          word-spacing: 0.1em !important;
+        }
+        
+        /* تنسيق خاص لـ Apple Pay */
+        .apple-pay-container + .flex-1.text-right h3,
+        .apple-pay-container + .flex-1.text-right p {
+          margin-bottom: 0.5rem !important;
+          line-height: 1.6 !important;
+          word-spacing: 0.15em !important;
+        }
+        
+        /* تنسيق خاص لبطاقة الائتمان */
+        .bg-gradient-to-r + .flex-1.text-right h3,
+        .bg-gradient-to-r + .flex-1.text-right p {
+          margin-bottom: 0.5rem !important;
+          line-height: 1.6 !important;
+          word-spacing: 0.2em !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen py-8">
+    <div class="max-w-2xl mx-auto px-4">
+        <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">اختبار تباعد الكلمات في أزرار الدفع</h1>
+        
+        <!-- Apple Pay Button -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
+            <h2 class="text-xl font-bold mb-4 text-gray-800">Apple Pay</h2>
+            <div class="p-6 rounded-2xl border-2 border-gray-200 hover:border-gray-300 transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 bg-white border border-gray-200 rounded-2xl flex items-center justify-center">
+                        <div class="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">AP</span>
+                        </div>
+                    </div>
+                    <div class="flex-1 text-right">
+                        <h3 class="font-bold text-gray-800 text-lg mb-2">Apple Pay</h3>
+                        <p class="text-gray-600 leading-relaxed">الدفع السريع عبر Apple Pay</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Credit Card Button -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
+            <h2 class="text-xl font-bold mb-4 text-gray-800">بطاقة ائتمان</h2>
+            <div class="p-6 rounded-2xl border-2 border-blue-500 bg-blue-50 transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">CC</span>
+                    </div>
+                    <div class="flex-1 text-right">
+                        <h3 class="font-bold text-gray-800 text-lg mb-2">بطاقة ائتمان</h3>
+                        <p class="text-gray-600 leading-relaxed">فيزا، ماستركارد، مدى</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card Icons -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-xl font-bold mb-4 text-gray-800">أيقونات البطاقات</h2>
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-100">
+                <div class="text-center mb-3">
+                    <h4 class="text-sm font-semibold text-blue-800 mb-1">البطاقات المقبولة</h4>
+                    <p class="text-xs text-blue-600">نقبل جميع البطاقات الرئيسية</p>
+                </div>
+                <div class="flex items-center justify-center gap-6">
+                    <div class="flex flex-col items-center">
+                        <div class="w-14 h-9 bg-blue-600 rounded flex items-center justify-center mb-2">
+                            <span class="text-white font-bold text-xs">VISA</span>
+                        </div>
+                        <span class="text-sm font-medium text-gray-700">Visa</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-14 h-9 bg-red-600 rounded flex items-center justify-center mb-2">
+                            <span class="text-white font-bold text-xs">MC</span>
+                        </div>
+                        <span class="text-sm font-medium text-gray-700">Mastercard</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-14 h-9 bg-green-600 rounded flex items-center justify-center mb-2">
+                            <span class="text-white font-bold text-xs">مدى</span>
+                        </div>
+                        <span class="text-sm font-medium text-gray-700">مدى</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-8 text-center">
+            <p class="text-gray-600">هذا اختبار لتباعد الكلمات في أزرار الدفع</p>
+            <p class="text-sm text-gray-500 mt-2">إذا كنت ترى تباعد محسن بين الكلمات، فإن التحديثات تعمل بشكل صحيح</p>
+        </div>
+    </div>
+</body>
+</html> 

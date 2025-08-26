@@ -1,0 +1,256 @@
+/* ملف التجاوب الشامل */
+
+/* ===== إعدادات عامة للتجاوب ===== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ===== التجاوب مع الشاشات المختلفة ===== */
+
+/* الهواتف الصغيرة جداً (320px - 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  /* النصوص */
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.125rem; }
+  p, span, a { font-size: 0.875rem; }
+  
+  /* المسافات */
+  .p-4 { padding: 0.75rem; }
+  .p-8 { padding: 1rem; }
+  .m-4 { margin: 0.75rem; }
+  .m-8 { margin: 1rem; }
+  
+  /* الشبكة */
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  /* الأزرار */
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    min-height: 44px;
+  }
+  
+  /* البطاقات */
+  .card {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* الهواتف المتوسطة (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  /* النصوص */
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  p, span, a { font-size: 1rem; }
+  
+  /* الشبكة */
+  .grid-cols-2 { grid-template-columns: repeat(1, 1fr); }
+  .grid-cols-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-cols-4 { grid-template-columns: repeat(2, 1fr); }
+  
+  /* الأزرار */
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* التابلت (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  /* النصوص */
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  p, span, a { font-size: 1rem; }
+  
+  /* الشبكة */
+  .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-cols-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-cols-4 { grid-template-columns: repeat(3, 1fr); }
+  
+  /* الأزرار */
+  .btn {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+  }
+}
+
+/* اللابتوب (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .container {
+    padding: 0 2rem;
+  }
+  
+  /* النصوص */
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+  p, span, a { font-size: 1.125rem; }
+  
+  /* الشبكة */
+  .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+  
+  /* الأزرار */
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* الشاشات الكبيرة جداً (1441px+) */
+@media (min-width: 1441px) {
+  .container {
+    max-width: 1400px;
+    padding: 0 2rem;
+  }
+  
+  /* النصوص */
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2.25rem; }
+  h3 { font-size: 2rem; }
+  p, span, a { font-size: 1.25rem; }
+  
+  /* الشبكة */
+  .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+  
+  /* الأزرار */
+  .btn {
+    padding: 1.125rem 2.25rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* ===== تحسينات خاصة بالهواتف ===== */
+
+/* تحسين اللمس على الهواتف */
+@media (max-width: 768px) {
+  /* زيادة حجم مناطق اللمس */
+  button, a, input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* تحسين المسافات بين العناصر */
+  .space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+  
+  .space-y-6 > * + * {
+    margin-top: 1.5rem;
+  }
+  
+  /* تحسين النصوص */
+  input, textarea, select {
+    font-size: 16px; /* منع التكبير التلقائي على iOS */
+  }
+}
+
+/* ===== تحسينات خاصة بالشاشات الكبيرة ===== */
+
+/* تحسين العرض على الشاشات الكبيرة */
+@media (min-width: 1024px) {
+  /* زيادة المسافات */
+  .space-y-8 > * + * {
+    margin-top: 2rem;
+  }
+  
+  .space-y-12 > * + * {
+    margin-top: 3rem;
+  }
+  
+  /* تحسين الشبكة */
+  .grid {
+    gap: 2rem;
+  }
+}
+
+/* ===== تحسينات الأداء ===== */
+
+/* تحسين الحركة للمستخدمين الذين يفضلون تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== تحسينات التباين ===== */
+
+/* تحسين التباين للمستخدمين الذين يفضلون التباين العالي */
+@media (prefers-contrast: high) {
+  .btn {
+    border: 2px solid currentColor;
+  }
+  
+  .card {
+    border: 1px solid #000;
+  }
+  
+  input, textarea, select {
+    border: 2px solid #000;
+  }
+}
+
+/* ===== تحسينات الشاشات عالية الدقة ===== */
+
+/* تحسين العرض على الشاشات عالية الدقة */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* ===== تحسينات الشاشات المنخفضة ===== */
+
+/* تحسين العرض على الشاشات المنخفضة */
+@media (max-height: 500px) and (orientation: landscape) {
+  .header-spacer {
+    height: 60px;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+  }
+  
+  section {
+    padding: 2rem 0;
+  }
+} 

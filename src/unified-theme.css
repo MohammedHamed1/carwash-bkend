@@ -1,0 +1,168 @@
+/* نظام الألوان والخطوط الموحد */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* الألوان الأساسية الموحدة */
+  --primary-green: #16a34a; /* green-600 */
+  --primary-green-dark: #15803d; /* green-700 */
+  --primary-green-light: #22c55e; /* green-500 */
+  --primary-green-bg: #f0fdf4; /* green-50 */
+  
+  /* الألوان الثانوية */
+  --text-dark: #1f2937; /* gray-800 */
+  --text-medium: #374151; /* gray-700 */
+  --text-light: #6b7280; /* gray-500 */
+  --text-white: #ffffff;
+  
+  /* الخلفيات */
+  --bg-white: #ffffff;
+  --bg-light: #f9fafb; /* gray-50 */
+  --bg-gray: #f3f4f6; /* gray-100 */
+  
+  /* الظلال */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-green: 0 4px 14px 0 rgb(34 197 94 / 0.3);
+}
+
+/* الخطوط الأساسية */
+body {
+  font-family: 'Cairo', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* العناوين */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
+  color: var(--primary-green-dark);
+  line-height: 1.3;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1.125rem; }
+
+/* النصوص */
+p {
+  color: var(--text-medium);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* الأزرار الموحدة */
+.btn-primary {
+  background: var(--primary-green);
+  color: var(--text-white);
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background: var(--primary-green-dark);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--bg-white);
+  color: var(--primary-green);
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 2px solid var(--primary-green);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-secondary:hover {
+  background: var(--primary-green);
+  color: var(--text-white);
+  transform: translateY(-2px);
+}
+
+/* الأيقونات الموحدة */
+.icon-primary {
+  background: var(--primary-green);
+  color: var(--text-white);
+  padding: 0.75rem;
+  border-radius: 50%;
+  box-shadow: var(--shadow-green);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.icon-primary:hover {
+  background: var(--primary-green-dark);
+  transform: scale(1.1);
+}
+
+/* البطاقات الموحدة */
+.card {
+  background: var(--bg-white);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+/* التدرجات الخضراء */
+.gradient-green {
+  background: linear-gradient(135deg, var(--primary-green-light), var(--primary-green));
+}
+
+.gradient-green-dark {
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-green-dark));
+}
+
+/* النصوص الخضراء */
+.text-green-primary { color: var(--primary-green); }
+.text-green-dark { color: var(--primary-green-dark); }
+.text-green-light { color: var(--primary-green-light); }
+
+/* الخلفيات الخضراء */
+.bg-green-primary { background-color: var(--primary-green); }
+.bg-green-dark { background-color: var(--primary-green-dark); }
+.bg-green-light { background-color: var(--primary-green-light); }
+.bg-green-bg { background-color: var(--primary-green-bg); }
+
+/* تحسينات للأجهزة المحمولة */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  
+  .btn-primary, .btn-secondary {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+} 

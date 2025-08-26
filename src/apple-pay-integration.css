@@ -1,0 +1,255 @@
+/* Apple Pay Integration Styles */
+
+/* Apple Pay Button Styling */
+.wpwl-form {
+  max-width: 100% !important;
+}
+
+.wpwl-apple-pay-button {
+  font-size: 16px !important;
+  display: block !important;
+  width: 100% !important;
+  -webkit-appearance: -apple-pay-button;
+  -apple-pay-button-type: buy;
+  -webkit-appearance: -apple-pay-button !important;
+  height: 44px !important;
+  border-radius: 8px !important;
+  margin: 8px 0 !important;
+}
+
+/* Apple Pay Button Types */
+.wpwl-apple-pay-button[data-apple-pay-button-type="buy"] {
+  -apple-pay-button-type: buy;
+}
+
+.wpwl-apple-pay-button[data-apple-pay-button-type="donate"] {
+  -apple-pay-button-type: donate;
+}
+
+.wpwl-apple-pay-button[data-apple-pay-button-type="check-out"] {
+  -apple-pay-button-type: check-out;
+}
+
+.wpwl-apple-pay-button[data-apple-pay-button-type="book"] {
+  -apple-pay-button-type: book;
+}
+
+.wpwl-apple-pay-button[data-apple-pay-button-type="subscribe"] {
+  -apple-pay-button-type: subscribe;
+}
+
+/* Apple Pay Button Styles */
+.wpwl-apple-pay-button[data-apple-pay-button-style="white"] {
+  -apple-pay-button-style: white;
+}
+
+.wpwl-apple-pay-button[data-apple-pay-button-style="white-outline"] {
+  -apple-pay-button-style: white-outline;
+}
+
+.wpwl-apple-pay-button[data-apple-pay-button-style="black"] {
+  -apple-pay-button-style: black;
+}
+
+/* Apple Pay Container */
+.apple-pay-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Apple Pay Form */
+.apple-pay-form {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+/* Apple Pay Header */
+.apple-pay-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.apple-pay-header h3 {
+  color: #1f2937;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.apple-pay-header p {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Apple Pay Amount Display */
+.apple-pay-amount {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.apple-pay-amount .amount {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.apple-pay-amount .currency {
+  font-size: 16px;
+  color: #6b7280;
+  margin-right: 4px;
+}
+
+/* Apple Pay Button Container */
+.apple-pay-button-container {
+  margin: 20px 0;
+}
+
+/* Apple Pay Loading State */
+.apple-pay-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.apple-pay-loading .spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e5e7eb;
+  border-top: 2px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Apple Pay Error State */
+.apple-pay-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 16px 0;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+/* Apple Pay Success State */
+.apple-pay-success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 16px 0;
+  color: #16a34a;
+  font-size: 14px;
+}
+
+/* Apple Pay Responsive Design */
+@media (max-width: 768px) {
+  .apple-pay-container {
+    padding: 12px;
+  }
+  
+  .apple-pay-form {
+    padding: 16px;
+  }
+  
+  .apple-pay-amount .amount {
+    font-size: 20px;
+  }
+  
+  .wpwl-apple-pay-button {
+    height: 40px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Apple Pay Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .apple-pay-form {
+    background: #1f2937;
+    border-color: #374151;
+  }
+  
+  .apple-pay-header h3 {
+    color: #f9fafb;
+  }
+  
+  .apple-pay-header p {
+    color: #d1d5db;
+  }
+  
+  .apple-pay-amount {
+    background: #374151;
+  }
+  
+  .apple-pay-amount .amount {
+    color: #f9fafb;
+  }
+  
+  .apple-pay-amount .currency {
+    color: #d1d5db;
+  }
+}
+
+/* Apple Pay Accessibility */
+.wpwl-apple-pay-button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Apple Pay Animation */
+.apple-pay-button-container {
+  transition: all 0.3s ease;
+}
+
+.apple-pay-button-container:hover {
+  transform: translateY(-1px);
+}
+
+/* Apple Pay Disabled State */
+.wpwl-apple-pay-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Apple Pay Custom Branding */
+.apple-pay-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.apple-pay-brand img {
+  height: 24px;
+  width: auto;
+}
+
+/* Apple Pay Security Badge */
+.apple-pay-security {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.apple-pay-security .lock-icon {
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 14px;
+} 

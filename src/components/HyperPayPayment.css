@@ -1,0 +1,416 @@
+/* HyperPay Payment Component Styles */
+.hyperpay-payment-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Initial Step Styles */
+.hyperpay-init {
+  text-align: center;
+}
+
+.payment-summary {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  border: 1px solid #e9ecef;
+}
+
+.payment-summary h3 {
+  color: #2c5530;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+  color: #495057;
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-item.total {
+  font-weight: 600;
+  font-size: 16px;
+  color: #2c5530;
+  border-top: 2px solid #28a745;
+  margin-top: 8px;
+  padding-top: 12px;
+}
+
+.payment-methods {
+  margin-bottom: 24px;
+}
+
+.payment-methods h4 {
+  color: #2c5530;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  margin: 8px 0;
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  color: #495057;
+}
+
+.payment-method img {
+  width: 40px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.payment-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Button Styles */
+.btn-pay {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+}
+
+.btn-pay:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+}
+
+.btn-pay:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-cancel {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel:hover:not(:disabled) {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+.btn-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Checkout Step Styles */
+.hyperpay-checkout {
+  text-align: center;
+}
+
+.checkout-header {
+  margin-bottom: 24px;
+}
+
+.checkout-header h3 {
+  color: #2c5530;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.checkout-header p {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.paymentWidgets {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.checkout-footer {
+  margin-top: 20px;
+}
+
+/* Processing Step Styles */
+.hyperpay-processing {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.processing-spinner {
+  margin-bottom: 20px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e9ecef;
+  border-top: 4px solid #28a745;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hyperpay-processing h3 {
+  color: #2c5530;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.hyperpay-processing p {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+/* Success Step Styles */
+.hyperpay-success {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  background: #28a745;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 auto 20px;
+}
+
+.hyperpay-success h3 {
+  color: #2c5530;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.hyperpay-success p {
+  color: #495057;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.success-details {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  border: 1px solid #e9ecef;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  color: #495057;
+}
+
+.detail-item:first-child {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+}
+
+.btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+}
+
+/* Error Step Styles */
+.hyperpay-error {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.error-icon {
+  width: 60px;
+  height: 60px;
+  background: #dc3545;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 auto 20px;
+}
+
+.hyperpay-error h3 {
+  color: #dc3545;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.hyperpay-error p {
+  color: #6c757d;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.error-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn-retry {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-retry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* HyperPay Widget Customization */
+.paymentWidgets {
+  direction: ltr;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hyperpay-payment-container {
+    margin: 10px;
+    padding: 16px;
+  }
+
+  .payment-actions,
+  .error-actions {
+    flex-direction: column;
+  }
+
+  .btn-pay,
+  .btn-cancel,
+  .btn-success,
+  .btn-retry {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .summary-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] .hyperpay-payment-container {
+  text-align: right;
+}
+
+[dir="rtl"] .summary-item,
+[dir="rtl"] .detail-item {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .payment-method {
+  flex-direction: row-reverse;
+}
+
+/* Loading States */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Focus States for Accessibility */
+.btn-pay:focus,
+.btn-cancel:focus,
+.btn-success:focus,
+.btn-retry:focus {
+  outline: 2px solid #28a745;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .hyperpay-payment-container {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+
+  .btn-pay,
+  .btn-cancel,
+  .btn-success,
+  .btn-retry {
+    display: none;
+  }
+}
