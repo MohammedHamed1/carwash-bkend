@@ -48,7 +48,7 @@ app.get('/', (req, res) => {
 });
 
 // Apple Pay Domain Association Route
-app.get('/.well-known/apple-developer-merchantid-domain-association', (req, res) => {
+app.get('/.well-known/apple-developer-merchantid-domain-association.txt', (req, res) => {
   const path = require('path');
   const filePath = path.join(__dirname, 'apple-developer-merchantid-domain-association.txt');
 
