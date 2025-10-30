@@ -1,6 +1,6 @@
 // Database Configuration - Auto Connect
 const MONGODB_CONFIG = {
-  uri: process.env.MONGODB_URI || "mongodb+srv://CarWasherDB:Password%40%23%24123456789@dartabases.aqbbmr9.mongodb.net/CarWasherDB?retryWrites=true&w=majority&appName=DartaBases",
+  uri: process.env.MONGODB_URI,
   options: {
     // Modern MongoDB connection options
     maxPoolSize: 10,
