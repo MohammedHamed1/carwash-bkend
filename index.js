@@ -50,11 +50,12 @@ app.get('/', (req, res) => {
 // Apple Pay Domain Association Route
 app.get('/.well-known/apple-developer-merchantid-domain-association(.txt)?', (req, res) => {
   const path = require('path');
-  const filePath = path.join(__dirname, 'apple-developer-merchantid-domain-association.txt');
+  // Apple requires no extension
+  const filePath = path.join(__dirname, 'apple-developer-merchantid-domain-association');
 
   // Set proper headers for Apple Pay
   res.setHeader('Content-Type', 'text/plain');
-  res.setHeader('Cache-Control', 'public, max-age=3600'); // Cache for 1 hour
+  res.setHeader('Cache-Control', 'public, max-age=3600');
 
   res.sendFile(filePath, (err) => {
     if (err) {
