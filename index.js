@@ -54,7 +54,7 @@ app.get('/.well-known/apple-developer-merchantid-domain-association(.txt)?', (re
   const filePath = path.join(__dirname, 'apple-developer-merchantid-domain-association');
 
   // Set proper headers for Apple Pay
-  res.setHeader('Content-Type', 'text/plain');
+  res.setHeader('Content-Type', 'application/octet-stream');
   res.setHeader('Cache-Control', 'public, max-age=3600');
 
   res.sendFile(filePath, (err) => {
